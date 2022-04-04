@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    Dispositivos
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dispositivo of dispositivos">
+          <td>{{ dispositivo.id }}</td>
+          <td>{{ dispositivo.marca }}</td>
+          <td>{{ dispositivo.modelo }}</td>
+          <td>$ {{ dispositivo.precio | number }} </td>
+          <td>
+            <button class="btn btn-warning" routerLink="/editar/{{ dispositivo.id }}">
+              Editar
+            </button>
+            <button class="btn btn-danger" (click)="borrar(dispositivo.id)">
+              Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <hr>
+  <pre>Cristian Omar Puentes Diaz</pre>
+</div>

@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-header">
+    Editar dispositivo
+  </div>
+  <div class="card-body">
+    <form [formGroup]="miFormulario" (ngSubmit)="enviarDatos()">
+
+      <!-- Input de Marca -->
+      <div class="mb-3">
+        <label class="form-label">Marca:</label>
+        <input type="text"
+               class="form-control"
+               name=""
+               formControlName="marca"
+               placeholder="Ingresa la marca">
+      </div>
+
+      <!-- Input de Modelo -->
+      <div class="mb-3">
+        <label class="form-label">Modelo:</label>
+        <input type="text"
+               class="form-control"
+               name=""
+               formControlName="modelo"
+               placeholder="Ingresa el modelo">
+      </div>
+
+      <!-- Input de Precio -->
+      <div class="mb-3">
+        <label class="form-label">Precio:</label>
+        <input type="number"
+               class="form-control"
+               name=""
+               formControlName="precio"
+               placeholder="Ingresa el precio">
+      </div>
+
+      <div class="btn-group" role="group" aria-label="">
+        <button type="submit" class="btn btn-success">Actulizar</button>
+        <button routerLink="/listar" type="button" class="btn btn-primary">Cancelar</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <hr>
+  <pre>Cristian Omar Puentes Diaz</pre>
+</div>
